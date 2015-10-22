@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Html | My Octopress Blog]]></title>
-  <link href="http://bitwsf.github.io/blog/categories/html/atom.xml" rel="self"/>
-  <link href="http://bitwsf.github.io/"/>
+  <link href="http://yoursite.com/blog/categories/html/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
   <updated>2015-10-23T00:32:02+08:00</updated>
-  <id>http://bitwsf.github.io/</id>
+  <id>http://yoursite.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[MyBlog]]></title>
-    <link href="http://bitwsf.github.io/blog/2015/10/22/myblog/"/>
+    <link href="http://yoursite.com/blog/2015/10/22/myblog/"/>
     <updated>2015-10-22T23:43:31+08:00</updated>
-    <id>http://bitwsf.github.io/blog/2015/10/22/myblog</id>
+    <id>http://yoursite.com/blog/2015/10/22/myblog</id>
     <content type="html"><![CDATA[<h1>你好</h1>
 
 <pre><code class="java">class MyClass{
@@ -35,9 +35,9 @@
   
   <entry>
     <title type="html"><![CDATA[HelloBlog]]></title>
-    <link href="http://bitwsf.github.io/blog/2015/10/22/hello/"/>
+    <link href="http://yoursite.com/blog/2015/10/22/hello/"/>
     <updated>2015-10-22T23:43:31+08:00</updated>
-    <id>http://bitwsf.github.io/blog/2015/10/22/hello</id>
+    <id>http://yoursite.com/blog/2015/10/22/hello</id>
     <content type="html"><![CDATA[<h1>你好</h1>
 
 <h2>Hello</h2>
