@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://bitwsf.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: 从阳台出发
+subtitle: 唧唧歪歪.
+author: realwsf
 simple_search: https://www.google.com/search
 description:
 
@@ -99,3 +99,9 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# duoshuo switcher
+duoshuo_comment: true
+
+# jiashare switcher
+jia_share: true
