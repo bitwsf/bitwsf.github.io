@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Android | My Octopress Blog]]></title>
+  <link href="http://bitwsf.github.io/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://bitwsf.github.io/"/>
+  <updated>2015-10-23T00:17:21+08:00</updated>
+  <id>http://bitwsf.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[MyBlog]]></title>
+    <link href="http://bitwsf.github.io/blog/2015/10/22/myblog/"/>
+    <updated>2015-10-22T23:43:31+08:00</updated>
+    <id>http://bitwsf.github.io/blog/2015/10/22/myblog</id>
+    <content type="html"><![CDATA[<h1>你好</h1>
+
+<pre><code class="java">class MyClass{
+
+    private String name;
+
+    public static void main(String[] args) {
+        System.out.println();
+    }
+
+}
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
