@@ -1,0 +1,21 @@
+---
+layout: post
+title: "MyBlog"
+date: 2015-10-22 23:43:31 +0800
+comments: true
+categories: [Android, HTML]
+---
+
+#你好
+
+```java
+class MyClass{
+	
+	private String name;
+	
+	public static void main(String[] args) {
+		System.out.println();
+	}
+
+}
+```
