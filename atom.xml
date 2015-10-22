@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://bitwsf.github.io/atom.xml" rel="self"/>
   <link href="http://bitwsf.github.io/"/>
-  <updated>2015-10-23T00:30:02+08:00</updated>
+  <updated>2015-10-23T00:32:02+08:00</updated>
   <id>http://bitwsf.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -44,7 +44,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[MyBlog]]></title>
+    <title type="html"><![CDATA[HelloBlog]]></title>
     <link href="http://bitwsf.github.io/blog/2015/10/22/hello/"/>
     <updated>2015-10-22T23:43:31+08:00</updated>
     <id>http://bitwsf.github.io/blog/2015/10/22/hello</id>
