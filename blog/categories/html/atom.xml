@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Html | 从阳台出发]]></title>
-  <link href="http://bitwsf.github.io/blog/categories/html/atom.xml" rel="self"/>
-  <link href="http://bitwsf.github.io/"/>
-  <updated>2015-10-23T01:34:27+08:00</updated>
-  <id>http://bitwsf.github.io/</id>
+  <title><![CDATA[Category: Html | 写起来]]></title>
+  <link href="http://realwsf.com/blog/categories/html/atom.xml" rel="self"/>
+  <link href="http://realwsf.com/"/>
+  <updated>2015-10-23T23:05:46+08:00</updated>
+  <id>http://realwsf.com/</id>
   <author>
     <name><![CDATA[realwsf]]></name>
     
@@ -14,30 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[MyBlog]]></title>
-    <link href="http://bitwsf.github.io/blog/2015/10/22/myblog/"/>
-    <updated>2015-10-22T23:43:31+08:00</updated>
-    <id>http://bitwsf.github.io/blog/2015/10/22/myblog</id>
-    <content type="html"><![CDATA[<h1>你好</h1>
-
-<pre><code class="java">class MyClass{
-
-    private String name;
-
-    public static void main(String[] args) {
-        System.out.println();
-    }
-
-}
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[HelloBlog]]></title>
-    <link href="http://bitwsf.github.io/blog/2015/10/22/hello/"/>
+    <link href="http://realwsf.com/blog/2015/10/22/hello/"/>
     <updated>2015-10-22T23:43:31+08:00</updated>
-    <id>http://bitwsf.github.io/blog/2015/10/22/hello</id>
+    <id>http://realwsf.com/blog/2015/10/22/hello</id>
     <content type="html"><![CDATA[<h1>你好</h1>
 
 <h2>Hello</h2>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ssh | 写起来]]></title>
+  <link href="http://realwsf.com/blog/categories/ssh/atom.xml" rel="self"/>
+  <link href="http://realwsf.com/"/>
+  <updated>2015-10-23T23:05:46+08:00</updated>
+  <id>http://realwsf.com/</id>
+  <author>
+    <name><![CDATA[realwsf]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Git多账号共存]]></title>
+    <link href="http://realwsf.com/blog/2015/10/22/git-multiple-account/"/>
+    <updated>2015-10-22T23:43:31+08:00</updated>
+    <id>http://realwsf.com/blog/2015/10/22/git-multiple-account</id>
+    <content type="html"><![CDATA[<h1>Git多账号共存</h1>
+
+<p>工作中使用git管理代码，自己也在github上提交代码，就需要2个git账号共存：</p>
+
+<h2>分别生成ssh key</h2>
+
+<h3>第一个账号</h3>
+
+<pre><code class="java">ssh-keygen -t rsa -b 4096 -C "111111@111.com"
+Enter file in which to save the key (C:/Users/Administrator/.ssh/id_rsa): id_rsa_work
+</code></pre>
+
+<h3>第二个账号</h3>
+
+<pre><code class="java">ssh-keygen -t rsa -b 4096 -C "222222@222.com"
+Enter file in which to save the key (C:/Users/Administrator/.ssh/id_rsa): id_rsa_github
+</code></pre>
+
+<h2>新密钥添加到SSH agent中</h2>
+
+<pre><code class="java">ssh-add ~/.ssh/id_rsa_work
+ssh-add ~/.ssh/id_rsa_github
+</code></pre>
+
+<p>如果出现Could not open a connection to your authentication agent的错误，就试着用以下命令：
+<code>java
+ssh-agent bash
+ssh-add ~/.ssh/id_rsa_work
+ssh-add ~/.ssh/id_rsa_github
+</code></p>
+
+<h2>修改config文件</h2>
+
+<p>在~/.ssh目录下找到config文件，如果没有就创建：
+<code>java
+cd ~/.ssh
+touch config
+</code></p>
+
+<p>然后修改config的内容如下：</p>
+
+<p>该文件用于配置私钥对应的服务器
+公司 user(111111@111.com)
+<code>java
+Host 111.com
+ HostName 111.com
+ User git
+ IdentityFile C:/Users/Administrator/.ssh/id_rsa_work
+</code></p>
+
+<p>第二个 user(222222@222.com)用于github
+<code>java
+Host github.com
+ HostName github.com
+ User git
+ IdentityFile C:/Users/Administrator/.ssh/id_rsa_github
+</code></p>
+
+<h2>把生成的~/.ssh/id_rsa_github.pub的内容加到github的账号key列表中</h2>
+
+<h2>测试</h2>
+
+<pre><code class="java">ssh -T git@github.com
+</code></pre>
+
+<p>结果出现：
+<code>
+Hi YourGitHubAccount! You've successfully authenticated, but GitHub does not provide shell access.
+</code>
+说明可以成功连上github了</p>
+]]></content>
+  </entry>
+  
+</feed>

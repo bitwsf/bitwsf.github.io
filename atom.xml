@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[从阳台出发]]></title>
-  <link href="http://bitwsf.github.io/atom.xml" rel="self"/>
-  <link href="http://bitwsf.github.io/"/>
-  <updated>2015-10-23T01:34:27+08:00</updated>
-  <id>http://bitwsf.github.io/</id>
+  <title><![CDATA[写起来]]></title>
+  <link href="http://realwsf.com/atom.xml" rel="self"/>
+  <link href="http://realwsf.com/"/>
+  <updated>2015-10-23T23:05:46+08:00</updated>
+  <id>http://realwsf.com/</id>
   <author>
     <name><![CDATA[realwsf]]></name>
     
@@ -14,43 +14,122 @@
 
   
   <entry>
-    <title type="html"><![CDATA[MyBlog]]></title>
-    <link href="http://bitwsf.github.io/blog/2015/10/22/myblog/"/>
+    <title type="html"><![CDATA[HelloBlog]]></title>
+    <link href="http://realwsf.com/blog/2015/10/22/hello/"/>
     <updated>2015-10-22T23:43:31+08:00</updated>
-    <id>http://bitwsf.github.io/blog/2015/10/22/myblog</id>
+    <id>http://realwsf.com/blog/2015/10/22/hello</id>
     <content type="html"><![CDATA[<h1>你好</h1>
+
+<h2>Hello</h2>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git多账号共存]]></title>
+    <link href="http://realwsf.com/blog/2015/10/22/git-multiple-account/"/>
+    <updated>2015-10-22T23:43:31+08:00</updated>
+    <id>http://realwsf.com/blog/2015/10/22/git-multiple-account</id>
+    <content type="html"><![CDATA[<h1>Git多账号共存</h1>
+
+<p>工作中使用git管理代码，自己也在github上提交代码，就需要2个git账号共存：</p>
+
+<h2>分别生成ssh key</h2>
+
+<h3>第一个账号</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">b</span> <span class="mi">4096</span> <span class="o">-</span><span class="n">C</span> <span class="s">&quot;111111@111.com&quot;</span>
+</span><span class='line'><span class="n">Enter</span> <span class="n">file</span> <span class="n">in</span> <span class="n">which</span> <span class="n">to</span> <span class="n">save</span> <span class="n">the</span> <span class="nf">key</span> <span class="o">(</span><span class="nl">C:</span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">Administrator</span><span class="o">/.</span><span class="na">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="o">):</span> <span class="n">id_rsa_work</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>第二个账号</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">b</span> <span class="mi">4096</span> <span class="o">-</span><span class="n">C</span> <span class="s">&quot;222222@222.com&quot;</span>
+</span><span class='line'><span class="n">Enter</span> <span class="n">file</span> <span class="n">in</span> <span class="n">which</span> <span class="n">to</span> <span class="n">save</span> <span class="n">the</span> <span class="nf">key</span> <span class="o">(</span><span class="nl">C:</span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">Administrator</span><span class="o">/.</span><span class="na">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="o">):</span> <span class="n">id_rsa_github</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>新密钥添加到SSH agent中</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">ssh</span><span class="o">-</span><span class="n">add</span> <span class="o">~/.</span><span class="na">ssh</span><span class="o">/</span><span class="n">id_rsa_work</span>
+</span><span class='line'><span class="n">ssh</span><span class="o">-</span><span class="n">add</span> <span class="o">~/.</span><span class="na">ssh</span><span class="o">/</span><span class="n">id_rsa_github</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果出现Could not open a connection to your authentication agent的错误，就试着用以下命令：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">ssh</span><span class="o">-</span><span class="n">agent</span> <span class="n">bash</span>
+</span><span class='line'><span class="n">ssh</span><span class="o">-</span><span class="n">add</span> <span class="o">~/.</span><span class="na">ssh</span><span class="o">/</span><span class="n">id_rsa_work</span>
+</span><span class='line'><span class="n">ssh</span><span class="o">-</span><span class="n">add</span> <span class="o">~/.</span><span class="na">ssh</span><span class="o">/</span><span class="n">id_rsa_github</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>修改config文件</h2>
+
+<p>在~/.ssh目录下找到config文件，如果没有就创建：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">cd</span> <span class="o">~/.</span><span class="na">ssh</span>
+</span><span class='line'><span class="n">touch</span> <span class="n">config</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后修改config的内容如下：</p>
+
+<p>该文件用于配置私钥对应的服务器
+公司 user(111111@111.com)</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">class</span> <span class="nc">MyClass</span><span class="o">{</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
-</span><span class='line'>  <span class="o">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">}</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">Host</span> <span class="mi">111</span><span class="o">.</span><span class="na">com</span>
+</span><span class='line'> <span class="n">HostName</span> <span class="mi">111</span><span class="o">.</span><span class="na">com</span>
+</span><span class='line'> <span class="n">User</span> <span class="n">git</span>
+</span><span class='line'> <span class="n">IdentityFile</span> <span class="nl">C:</span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">Administrator</span><span class="o">/.</span><span class="na">ssh</span><span class="o">/</span><span class="n">id_rsa_work</span>
 </span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[HelloBlog]]></title>
-    <link href="http://bitwsf.github.io/blog/2015/10/22/hello/"/>
-    <updated>2015-10-22T23:43:31+08:00</updated>
-    <id>http://bitwsf.github.io/blog/2015/10/22/hello</id>
-    <content type="html"><![CDATA[<h1>你好</h1>
 
-<h2>Hello</h2>
+<p>第二个 user(222222@222.com)用于github</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">Host</span> <span class="n">github</span><span class="o">.</span><span class="na">com</span>
+</span><span class='line'> <span class="n">HostName</span> <span class="n">github</span><span class="o">.</span><span class="na">com</span>
+</span><span class='line'> <span class="n">User</span> <span class="n">git</span>
+</span><span class='line'> <span class="n">IdentityFile</span> <span class="nl">C:</span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">Administrator</span><span class="o">/.</span><span class="na">ssh</span><span class="o">/</span><span class="n">id_rsa_github</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>把生成的~/.ssh/id_rsa_github.pub的内容加到github的账号key列表中</h2>
+
+<h2>测试</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="nd">@github.com</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>结果出现：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">Hi</span> <span class="n">YourGitHubAccount</span><span class="o">!</span> <span class="n">You</span><span class="err">&#39;</span><span class="n">ve</span> <span class="n">successfully</span> <span class="n">authenticated</span><span class="o">,</span> <span class="n">but</span> <span class="n">GitHub</span> <span class="n">does</span> <span class="n">not</span> <span class="n">provide</span> <span class="n">shell</span> <span class="n">access</span><span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>说明可以成功连上github了</p>
 ]]></content>
   </entry>
   
