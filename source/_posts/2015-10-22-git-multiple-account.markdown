@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Git多账号共存"
+title: "在同一台电脑上配置Git多账号共存"
 date: 2015-10-22 23:43:31 +0800
 comments: true
 categories: [git, ssh]
