@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ssh | 写起来]]></title>
   <link href="http://realwsf.com/blog/categories/ssh/atom.xml" rel="self"/>
   <link href="http://realwsf.com/"/>
-  <updated>2015-10-26T18:21:52+08:00</updated>
+  <updated>2015-10-26T18:23:34+08:00</updated>
   <id>http://realwsf.com/</id>
   <author>
     <name><![CDATA[realwsf]]></name>
@@ -18,9 +18,7 @@
     <link href="http://realwsf.com/blog/2015/10/22/git-multiple-account/"/>
     <updated>2015-10-22T23:43:31+08:00</updated>
     <id>http://realwsf.com/blog/2015/10/22/git-multiple-account</id>
-    <content type="html"><![CDATA[<h1>Git多账号共存</h1>
-
-<p>工作中使用git管理代码，自己也在github上提交代码，就需要2个git账号共存：</p>
+    <content type="html"><![CDATA[<p>工作中使用git管理代码，自己也在github上提交代码，就需要2个git账号共存：</p>
 
 <h2>分别生成ssh key</h2>
 
