@@ -6,7 +6,7 @@ comments: true
 categories: [git, ssh]
 ---
 
-#Git多账号共存
+
 工作中使用git管理代码，自己也在github上提交代码，就需要2个git账号共存：
 ##分别生成ssh key
 ###第一个账号
